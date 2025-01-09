@@ -19,7 +19,7 @@
   </div>
 
   <main class="bg-white rounded-3xl p-8 flex flex-col gap-8 mb-8">
-    <div class="flex-1 flex flex-col md:gap-8">
+    <div class="flex-1 flex flex-col gap-6 md:gap-8">
       <div class="flex flex-col gap-1 relative">
         <label for="bill">Bill</label>
         <div class="relative">
@@ -33,31 +33,34 @@
         </div>
       </div>
       
-      <div>
-          <label for="tip-label">
-            <input type="radio" name="tip" value="5">
-            <span>5%</span>
-          </label>
-          <label for="tip-label">
-            <input type="radio" name="tip" value="10">
-            <span>10%</span>
-          </label>
-          <label for="tip-label">
-            <input type="radio" name="tip" value="15">
-            <span>15%</span>
-          </label>
-          <label for="tip-label">
-            <input type="radio" name="tip" value="25">
-            <span>25%</span>
-          </label>
-          <label for="tip-label">
-            <input type="radio" name="tip" value="50">
-            <span>50%</span>
-          </label>
-          <label for="tip-label">
-            <input type="number" min="0" name="tip">
-          </label>
+    <div>
+      <p class="mb-3">Select Tip %</p>
+      <div class="grid grid-cols-2 grid-rows-3 gap-4">
+        <label for="tip-5" class="col-span-1">
+          <input type="radio" name="tip" id="tip-5" value="5" class="hidden peer">
+          <span class="bg-emerald-900 text-white block text-center py-2 rounded-md text-2xl peer-checked:bg-teal-400 peer-checked:text-emerald-800 hover:bg-teal-200 hover:text-emerald-800">5%</span>
+        </label>
+        <label for="tip-10" class="col-span-1">
+          <input type="radio" name="tip" id="tip-10" value="10" class="hidden peer">
+          <span class="bg-emerald-900 text-white block text-center py-2 rounded-md text-2xl peer-checked:bg-teal-400 peer-checked:text-emerald-800 hover:bg-teal-200 hover:text-emerald-800">10%</span>
+        </label>
+        <label for="tip-15" class="col-span-1">
+          <input type="radio" name="tip" id="tip-15" value="15" class="hidden peer">
+          <span class="bg-emerald-900 text-white block text-center py-2 rounded-md text-2xl peer-checked:bg-teal-400 peer-checked:text-emerald-800 hover:bg-teal-200 hover:text-emerald-800">15%</span>
+        </label>
+        <label for="tip-25" class="col-span-1">
+          <input type="radio" name="tip" id="tip-25" value="25" class="hidden peer">
+          <span class="bg-emerald-900 text-white block text-center py-2 rounded-md text-2xl peer-checked:bg-teal-400 peer-checked:text-emerald-800 hover:bg-teal-200 hover:text-emerald-800">25%</span>
+        </label>
+        <label for="tip-50" class="col-span-1">
+          <input type="radio" name="tip" id="tip-50" value="50" class="hidden peer">
+          <span class="bg-emerald-900 text-white block text-center py-2 rounded-md text-2xl peer-checked:bg-teal-400 peer-checked:text-emerald-800 hover:bg-teal-200 hover:text-emerald-800">50%</span>
+        </label>
+        <label for="tip-label">
+          <input type="text" min="0" name="tip" placeholder="Custom" class="max-w-full bg-gray-200 rounded-md text-xl text-emerald-700 py-2 pr-2 text-right placeholder-emerald-700 focus:outline-emerald-700">
+        </label>
       </div>
+    </div>
 
       <label for="numberOfPeople">Number of People</label>
       <input type="text" id="numberOfPeople" placeholder="0">
