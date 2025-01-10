@@ -80,26 +80,26 @@
         </div>
       </div>
 
-      <div>
-        <div>
-          <div>
+      <section class="bg-emerald-900 rounded-lg flex flex-col items-center justify-center text-white p-4 gap-4 flex-1 justify-between md:p-8">
+        <div class="w-full">
+          <div class="flex justify-between py-2">
             <div>
               <p>Tip Amount</p>
-              <p>/ person</p>
+              <p class="text-gray-500">/ person</p>
             </div>
-            <p id="tipAmount">$0.00</p>
+            <p id="tipAmount" class="text-4xl text-teal-500">$0.00</p>
           </div>
-          <div>
+          <div class="flex justify-between py-2">
             <div>
               <p>Total</p>
-              <p>/ person</p>
+              <p class="text-gray-500">/ person</p>
             </div>
-            <p id="totalAmount">$0.00</p>
+            <p id="totalAmount" class="text-4xl text-teal-500">$0.00</p>
           </div>
         </div>
-
-        <button onclick="resetResult()">RESET</button>
-      </div>
+  
+        <button onclick="resetResult()" class="bg-teal-500 text-emerald-900 text-xl w-full rounded-md p-3 hover:bg-teal-200">RESET</button>
+      </section>
     </main>
 
     <div class="attribution">
