@@ -17,7 +17,7 @@
       <img src="images/logo.svg" alt="logo"/>
     </div>
 
-    <main class="bg-white rounded-3xl p-8 flex flex-col gap-8 mb-8">
+    <main class="bg-white rounded-3xl p-8 flex flex-col gap-8 mb-8 md:flex-row max-w-4xl">
       <div class="flex-1 flex flex-col gap-6 md:gap-8">
         <div class="flex flex-col gap-1 relative">
           <label for="bill">Bill</label>
@@ -31,7 +31,7 @@
 
         <section>
           <p class="mb-3">Select Tip %</p>
-          <div class="grid grid-cols-2 grid-rows-3 gap-4">
+          <div class="grid grid-cols-2 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-2">
             <label for="tip-5" class="col-span-1">
               <input type="radio" name="tip" id="tip-5" value="5" class="hidden peer"/>
               <span class="bg-emerald-900 text-white block text-center py-2 rounded-md text-2xl peer-checked:bg-teal-400 peer-checked:text-emerald-800 hover:bg-teal-200 hover:text-emerald-800">
