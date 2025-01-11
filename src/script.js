@@ -44,3 +44,11 @@ function calculateTip() {
     tipAmountResult.textContent = `$${tipAmount.toFixed(2)}`
     totalAmount.textContent = `$${total.toFixed(2)}`
 }
+
+billInput.addEventListener("input", calculateTip)
+numberOfPeople.addEventListener("input", calculateTip)
+customInput.addEventListener("input", calculateTip)
+
+radioButtons.forEach(button => {
+    button.addEventListener("change", calculateTip)
+})
