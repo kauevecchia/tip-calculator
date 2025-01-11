@@ -60,6 +60,22 @@ function calculateTip() {
     totalAmount.textContent = `$${total.toFixed(2)}`
 }
 
+billInput.addEventListener("input", function() {
+    let value = billInput.value.replace(/\D/g, "")
+    value = Number(value) / 100
+
+    billInput.value = formatCurrency(value)
+})
+
+numberOfPeople.addEventListener("input", function() {
+    numberOfPeople.value = numberOfPeople.value.replace(/\D/g, "")
+    calculateTip()
+})
+customInput.addEventListener("input", function() {
+    customInput.value = customInput.value.replace(/\D/g, "")
+    calculateTip()
+})
+
 radioButtons.forEach(button => {
     button.addEventListener("change", calculateTip)
 })
