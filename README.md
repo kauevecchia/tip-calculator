@@ -11,7 +11,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 ### Screenshot
 
-![](./images/tip-calculator.jpg)
+![](./src/images/tip-calculator.jpg)
 
 ### Links
 
