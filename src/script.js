@@ -52,3 +52,14 @@ customInput.addEventListener("input", calculateTip)
 radioButtons.forEach(button => {
     button.addEventListener("change", calculateTip)
 })
+
+function resetAll() {
+    billInput.value = ""
+    numberOfPeople.value = ""
+    customInput.value = ""
+    radioButtons.forEach(button => button.checked = false)
+    tipAmountResult.textContent = "$0.00"
+    totalAmount.textContent = "$0.00"
+    billErrorText.textContent = ""
+    peopleErrorText.textContent = ""
+}
