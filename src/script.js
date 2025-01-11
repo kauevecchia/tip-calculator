@@ -9,9 +9,24 @@ const billErrorText = document.getElementById("billErrorText")
 const peopleErrorText = document.getElementById("peopleErrorText")
 
 
+function formatCurrency(value) {
+    try {
+        value = value.toLocaleString("en-us", {
+            style: "currency",
+            currency: "USD"
+        })
+    
+        return value
+
+    } catch (error) {
+        alert(`Error formatting the currency ${error.message}`)
+        return "$0.00"
+    }
+}
+
 function calculateTip() {
-    const billValue = parseFloat(billInput.value)
-    const peopleValue = parseFloat(numberOfPeople.value)
+    const billValue = parseFloat(billInput.value.replace(/[^0-9.]/g, ''))
+    const peopleValue = parseInt(numberOfPeople.value.replace(/[^0-9]/g, ''))
     let tipPercentage = 0
 
     radioButtons.forEach(button => {
@@ -21,7 +36,7 @@ function calculateTip() {
     })
 
     if(customInput.value) {
-        tipPercentage = parseFloat(customInput.value)
+        tipPercentage = parseFloat(customInput.value.replace(/[^0-9.]/g, ''))
     }
 
     if(isNaN(billValue) || billValue <= 0) {
@@ -44,10 +59,6 @@ function calculateTip() {
     tipAmountResult.textContent = `$${tipAmount.toFixed(2)}`
     totalAmount.textContent = `$${total.toFixed(2)}`
 }
-
-billInput.addEventListener("input", calculateTip)
-numberOfPeople.addEventListener("input", calculateTip)
-customInput.addEventListener("input", calculateTip)
 
 radioButtons.forEach(button => {
     button.addEventListener("change", calculateTip)
