@@ -53,7 +53,7 @@ function calculateTip() {
         peopleErrorText.textContent = ""
     }
 
-    const tipAmount = (billValue * tipPercentage) / 100
+    const tipAmount = (billValue * tipPercentage) / 1000
     const total = (billValue + tipAmount) / peopleValue
 
     tipAmountResult.textContent = `$${tipAmount.toFixed(2)}`
